@@ -40,15 +40,6 @@ window.addEventListener("load", () => {
   scoreY.textContent = savedPlayerScore ? savedPlayerScore : 0;
 });
 
-// == Close & Open Rule Modal ==
-ruleBtn.addEventListener('click', () => {
-  ruleBook.classList.remove('hidden');
-});
-
-closeBtn.addEventListener('click', function () {
-  ruleBook.classList.add('hidden');
-});
-
 // == DISPLAY CORRESPOND RANDOM IMAGE ==
 moves.forEach((move) => {
   move.addEventListener('click', (event) => {
@@ -83,8 +74,8 @@ moves.forEach((move) => {
 
     //3. Calculate score
     if (playerChoice === random) {
-      winLostText1.classList.toggle("hidden");
-      winLostText1.textContent = "TIE UP";
+      // winLostText1.classList.toggle("hidden");
+      // winLostText1.textContent = "TIE UP";
       return '';
     } else if (
       (playerChoice === 1 && random === 3) ||
@@ -134,8 +125,8 @@ function checkForWinner() {
     winLostText1.textContent = 'TIE UP';
   }
 }
-// == PLAY AGAIN ==
 
+// == PLAY AGAIN ==
 playAgain.addEventListener('click', () => {
   if (!gameActive) 
     return;
@@ -150,6 +141,15 @@ playAgain.addEventListener('click', () => {
   PCMoveContainer.classList.remove('three', 'scissor-img');
   ellipse.classList.remove('ellipse-transition');
   ellipse.classList.add('hidden');
+});
+
+// == Close & Open Rule Modal ==
+ruleBtn.addEventListener('click', () => {
+  ruleBook.classList.remove('hidden');
+});
+
+closeBtn.addEventListener('click', function () {
+  ruleBook.classList.add('hidden');
 });
 
 // == HURRAY ==
@@ -186,7 +186,6 @@ const resetGame = function () {
   ellipse.classList.remove("ellipse-transition-lost");
   ellipse.classList.add("hidden");
   nextBtn.classList.add("hidden");
-  // ruleBtn.classList.toggle("rule-btn-transition");
   localStorage.removeItem("computerScore"); // Clear localStorage
   localStorage.removeItem("playerScore"); // Clear localStorage
 };
@@ -196,6 +195,5 @@ const resetGame = function () {
   });
   
   hresetBtn.addEventListener('click', ()=>{
-  ruleBtn.classList.toggle("rule-btn-transition");
   resetGame();
 })

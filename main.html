@@ -3,7 +3,7 @@
 <link>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RPS</title>
+<title>RockPaperScissor</title>
 <link rel="stylesheet" href="rps-styles.css">
 </head>
 
@@ -15,7 +15,14 @@
                 <div class="title-name">
                     <p>ROCK</p>
                     <p>PAPER</p>
-                    <p>SCISSORS</p>
+                    <p>SCISSORS</p>// == Close & Open Rule Modal ==
+ruleBtn.addEventListener('click', () => {
+  ruleBook.classList.remove('hidden');
+});
+
+closeBtn.addEventListener('click', function () {
+  ruleBook.classList.add('hidden');
+});
                 </div>
                 <div class="score-cards">
                     <p class="score">
