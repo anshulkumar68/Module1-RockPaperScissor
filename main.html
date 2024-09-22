@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RPS</title>
+<link rel="stylesheet" href="rps-styles.css">
+</head>
+
+<body>
+    <main>
+        <!-- TITLE -->
+        <div class="title">
+            <div class="title-container">
+                <div class="title-name">
+                    <p>ROCK</p>
+                    <p>PAPER</p>
+                    <p>SCISSORS</p>
+                </div>
+                <div class="score-cards">
+                    <p class="score">
+                        <span>COMPUTER </span>
+                        <span>SCORE</span>
+                        <span class="computer-score">0</span>
+                    </p>
+                    <p class="score">
+                        <span>YOUR</span>
+                        <span>SCORE</span>
+                        <span class="your-score">0</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ICON -->
+        <div class="icons">
+            <div class="icons-container">
+                <div class="icons-container-1">
+                    <button class="move-container rock "><img class="move rock-img" src="images/move-1.png" alt="1">
+                    </button>
+                    <button class="move-container scissor "><img class="move scissor-img" src="images/move-3.png"
+                            alt="3">
+                    </button>
+                </div>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+                <button class="move-container paper "><img class="move paper-img" src="images/move-2.png"
+                        alt="2"></button>
+            </div>
+        </div>
+
+        <!-- RULES -->
+        <div class="rule-container">
+            <div class="rule-btn-container">
+                <button class="rule-btn">RULES</button>
+                <button class="next-btn hidden">NEXT</button>
+            </div>
+            <div class="rule-book-container hidden">
+                <h1 class="rule-title">Game Rules</h1>
+                <button class="rule-close-btn-container"><img class="close-btn" src="images/close.png"
+                        alt="close"></button>
+                <div class="rule-book">
+                    <span>+</span>
+                    <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                    <span>+</span>
+                    <p> Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or
+                        just “rock, paper, scissors.”</p>
+                    <span>+</span>
+                    <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the
+                        time</p>
+                    <span>+</span>
+                    <p>If both players lay down the same hand, each player lays down another hand</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- You WIN against PC -->
+        <div class="win-container hidden">
+            <div class="you-win">
+                <!-- ELLIPSE -->
+                <div class="ellipse hidden">
+                    <div class="ellipse-container">
+                        <div class="layer-1 ">
+                            <div class="layer-2 ">
+                                <div class="layer-3 ">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="picked">
+                    <span>YOU PICKED</span>
+                    <p class="move-container your-container"><img class="your-move" src="images/move-1.png"
+                            alt="move-image"></p>
+                </div>
+                <div class="you-win-text">
+                    <span class="you-win-text-line-1 win-lost-text-1 hidden">YOU WIN</span>
+                    <span class="you-win-text-line-2 win-lost-text-2 hidden">AGAINST PC</span>
+                    <button class="play-again-btn">PLAY AGAIN</button>
+                    <button class="reset-btn hidden">PLAY AGAIN</button>
+                </div>
+                <div class="picked">
+                    <span>PC PICKED</span>
+                    <p class="move-container computer-container "><img class="computer-move" src="images/move-1.png"
+                            alt="random-image"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HURRAY CONTAINER -->
+        <div class="hurray hidden">
+            <div class="hurray-container ">
+                <img id="star" src="images/star.png" alt="star">
+                <img id="trophy" src="images/trophy.png" alt="star">
+                <h1>HURRAY!!</h1>
+                <h2>YOU WON THE GAME</h2>
+                <button class="reset-btn hurray-reset-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="rps-script.js"></script>
+</body>
+
+</html>
