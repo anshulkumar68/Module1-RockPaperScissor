@@ -441,8 +441,20 @@ main {
 }
 
 /* == MEDIA QUERY == */
-/* @media only screen and (max-width:600px){
+@media only screen and (max-width:600px){
   .title-container {
    width: 35rem;
 }
-} */
+.you-win-text{
+  width: 15rem;
+}
+.you-win-text-line-1 {
+  font-size: 1.2rem;
+}
+.you-win{
+  margin: 0 3rem;
+}
+.ellipse-container{
+  margin: 0 -3.5rem;
+}
+}
