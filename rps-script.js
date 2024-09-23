@@ -100,7 +100,7 @@ moves.forEach((move) => {
 
 // == Check for winner ==
 function checkForWinner() {
-  if (Number(scoreY.textContent) >= 2) {
+  if (Number(scoreY.textContent) >= 15) {
     winLostText1.classList.remove('hidden');
     winLostText1.textContent = 'YOU WIN';
     winLostText2.classList.remove('hidden');
@@ -110,7 +110,7 @@ function checkForWinner() {
     gameActive = false;
     playAgain.classList.add('hidden');
     resetBtn.classList.remove('hidden');
-  } else if (Number(scoreC.textContent) >= 2) {
+  } else if (Number(scoreC.textContent) >= 15) {
     winLostText1.classList.remove('hidden');
     winLostText1.textContent = 'YOU LOST';
     winLostText2.classList.remove('hidden');
@@ -120,8 +120,8 @@ function checkForWinner() {
     ellipse.classList.remove('ellipse-transition');
     ellipse.classList.add('ellipse-transition-lost');
   } else if (
-    Number(scoreY.textContent) === 2 &&
-    Number(scoreC.textContent) === 2
+    Number(scoreY.textContent) === 15 &&
+    Number(scoreC.textContent) === 15
   ) {
     return '';
   }
