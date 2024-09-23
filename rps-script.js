@@ -74,8 +74,9 @@ moves.forEach((move) => {
 
     //3. Calculate score
     if (playerChoice === random) {
-      // winLostText1.classList.toggle("hidden");
-      // winLostText1.textContent = "TIE UP";
+      winLostText1.classList.remove("hidden");
+      winLostText1.textContent = "TIE";
+
       return '';
     } else if (
       (playerChoice === 1 && random === 3) ||
@@ -104,6 +105,7 @@ function checkForWinner() {
     winLostText1.textContent = 'YOU WIN';
     winLostText2.classList.remove('hidden');
     ruleBtn.classList.add('rule-btn-transition');
+    ellipse.classList.add('ellipse-transition-win');
     nextBtn.classList.remove('hidden');
     gameActive = false;
     playAgain.classList.add('hidden');
@@ -121,8 +123,7 @@ function checkForWinner() {
     Number(scoreY.textContent) === 2 &&
     Number(scoreC.textContent) === 2
   ) {
-    winLostText1.classList.remove('hidden');
-    winLostText1.textContent = 'TIE UP';
+    return '';
   }
 }
 
@@ -140,7 +141,10 @@ playAgain.addEventListener('click', () => {
   PCMoveContainer.classList.remove('two', 'paper-img');
   PCMoveContainer.classList.remove('three', 'scissor-img');
   ellipse.classList.remove('ellipse-transition');
+  ellipse.classList.remove('ellipse-transition-win');
+  ellipse.classList.remove('ellipse-transition-lost');
   ellipse.classList.add('hidden');
+  winLostText1.classList.add('hidden'); 
 });
 
 // == Close & Open Rule Modal ==
@@ -184,6 +188,7 @@ const resetGame = function () {
   resetBtn.classList.add("hidden");
   win.classList.add("hidden");
   ellipse.classList.remove("ellipse-transition-lost");
+  ellipse.classList.remove('ellipse-transition-win');
   ellipse.classList.add("hidden");
   nextBtn.classList.add("hidden");
   localStorage.removeItem("computerScore"); // Clear localStorage
