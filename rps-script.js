@@ -46,7 +46,7 @@ moves.forEach((move) => {
     if (!gameActive) return;
 
     const clickedImageAlt = event.target.alt;
-    const playerChoice = Number(event.target.alt);
+    // const playerChoice = Number(event.target.alt);
 
     //1. Generating a number
     const random = Math.trunc(Math.random() * 3) + 1;
