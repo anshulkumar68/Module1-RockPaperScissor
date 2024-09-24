@@ -441,7 +441,7 @@ main {
 /* == MEDIA QUERY == */
 @media only screen and (max-width:600px){
 
-  /* TITLE */
+  
  .title-container {
    width: 22rem;
    margin-top: 4rem;
@@ -467,7 +467,7 @@ main {
   font-size: 2rem;
 }
 
-/* ICONS */
+
 .icons-container{
   gap: 4rem;
 }
@@ -516,7 +516,6 @@ main {
 }
 
 
-/* WIN Container */
 .you-win{
   gap: 4rem;
   margin: 0 3rem;
