@@ -102,6 +102,7 @@ main {
 .rock,
 .one {
   border: 1rem solid #0074b6;
+  /* padding: 8rem; */
 }
 .paper,
 .two {
@@ -246,13 +247,10 @@ main {
 }
 
 /* ============ELLIPSE CONTAINER==========*/
-.ellipse{
+.ellipse {
   position: absolute;
-
   margin-bottom: 7.1rem;
   margin-right: 93.5rem;
-  /* top: 3rem;
-  left: -13.2rem; */
 }
 .ellipse-container {
   display: flex;
@@ -261,19 +259,17 @@ main {
   position: absolute;
   top: 0rem;
   left: 27.5rem;
-  /* margin-bottom: 10rem; */
-  /* margin-right: 28rem ; */
 }
-.ellipse-transition{
+.ellipse-transition {
   transform: translateX(27.5rem);
 }
-.ellipse-transition-lost{
+.ellipse-transition-lost {
   transform: translateX(30.2rem);
 }
-.ellipse-transition-win{
+.ellipse-transition-win {
   transform: translateX(-2rem);
 }
-.ellipse-transition-ti{
+.ellipse-transition-ti {
   transform: translateX(-0.7rem);
 }
 .layer-1 {
@@ -300,15 +296,15 @@ main {
 
 @keyframes outer1 {
   0% {
-    transform: scale(1); 
+    transform: scale(1);
     background-color: #7be382;
     width: 11rem;
     height: 11rem;
     box-shadow: 0px 1px 62px 0px #00000021;
   }
   100% {
-    transform: scale(1.2); 
-    background-color: #7be382; 
+    transform: scale(1.2);
+    background-color: #7be382;
     width: 11rem;
     height: 11rem;
     box-shadow: 0px 1px 62px 0px #00000021;
@@ -316,14 +312,14 @@ main {
 }
 @keyframes outer2 {
   0% {
-    transform: scale(1); 
-    background-color: #26cc00; 
+    transform: scale(1);
+    background-color: #26cc00;
     width: 8rem;
     height: 8rem;
   }
   100% {
-    transform: scale(1.2); 
-    background-color: #26cc00; 
+    transform: scale(1.2);
+    background-color: #26cc00;
     width: 8rem;
     height: 8rem;
     box-shadow: 0px 1px 62px 0px #00000021;
@@ -331,15 +327,15 @@ main {
 }
 @keyframes outer3 {
   0% {
-    transform: scale(1); 
-    background-color: #009c1a; 
+    transform: scale(1);
+    background-color: #009c1a;
     width: 6rem;
     height: 6rem;
     box-shadow: 0px 1px 62px 0px #00000021;
   }
   100% {
     transform: scale(1.2);
-    background-color: #009c1a; 
+    background-color: #009c1a;
     width: 6rem;
     height: 6rem;
     box-shadow: 0px 1px 62px 0px #00000021;
@@ -414,7 +410,6 @@ main {
 #trophy {
   position: absolute;
   top: 9.5rem;
-
 }
 .hurray-container h1 {
   font-size: 5rem;
@@ -440,21 +435,113 @@ main {
   z-index: 1;
 }
 
-/* == MEDIA QUERY == */
-@media only screen and (max-width:600px){
+/* ======== MEDIA QUERY ========= */
+@media only screen and (max-width: 600px) {
   .title-container {
-   width: 35rem;
+    width: 35rem;
+  }
+  .you-win-text {
+    width: 15rem;
+  }
+  .you-win-text-line-1 {
+    font-size: 1.2rem;
+  }
+  .you-win {
+    margin: 0 3rem;
+  }
+  .ellipse-container {
+    margin: 0 -3.5rem;
+  }
+  .icons {
+    padding-top: 10rem;
+  }
+  .you-win {
+    gap: 0rem;
+  }
+  .rock,
+  .one {
+    border: 0.6rem solid #0074b6;
+  }
+  .paper,
+  .two {
+    border: 0.6rem solid #ffa943;
+  }
+  .scissor,
+  .three {
+    border: 0.6rem solid #bd00ff;
+  }
+
+  /* ELLIPSE TRANSITION */
+  @keyframes outer1 {
+    0% {
+      transform: scale(1);
+      background-color: #7be382;
+      box-shadow: 0px 1px 62px 0px #00000021;
+      width: 9rem;
+      height: 9rem;
+    }
+    100% {
+      transform: scale(1.2);
+      background-color: #7be382;
+      width: 9rem;
+      height: 9rem;
+      box-shadow: 0px 1px 62px 0px #00000021;
+    }
+  }
+  @keyframes outer2 {
+    0% {
+      transform: scale(1);
+      background-color: #26cc00;
+      width: 7rem;
+      height: 7rem;
+    }
+    100% {
+      transform: scale(1.2);
+      background-color: #26cc00;
+      width: 7rem;
+      height: 7rem;
+      box-shadow: 0px 1px 62px 0px #00000021;
+    }
+  }
+  @keyframes outer3 {
+    0% {
+      transform: scale(1);
+      background-color: #009c1a;
+      width: 5rem;
+      height: 5rem;
+      box-shadow: 0px 1px 62px 0px #00000021;
+    }
+    100% {
+      transform: scale(1.2);
+      background-color: #009c1a;
+      width: 5rem;
+      height: 5rem;
+      box-shadow: 0px 1px 62px 0px #00000021;
+    }
+  }
+
+  .ellipse {
+    margin-bottom: 5.1rem;
+    margin-right: 80.2rem;
+  }
+  .ellipse-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0rem;
+    left: 27.5rem;
+  }
+  .ellipse-transition {
+  transform: translateX(23rem);
 }
-.you-win-text{
-  width: 15rem;
+.ellipse-transition-lost {
+  transform: translateX(30.2rem);
 }
-.you-win-text-line-1 {
-  font-size: 1.2rem;
+.ellipse-transition-win {
+  transform: translateX(-2rem);
 }
-.you-win{
-  margin: 0 3rem;
-}
-.ellipse-container{
-  margin: 0 -3.5rem;
+.ellipse-transition-ti {
+  transform: translateX(-0.7rem);
 }
 }
