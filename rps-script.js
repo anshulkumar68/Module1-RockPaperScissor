@@ -14,8 +14,8 @@ const ruleBtn = document.querySelector('.rule-btn');
 const closeBtn = document.querySelector('.rule-close-btn-container');
 const PCMoveContainer = document.querySelector('.computer-container');
 const yourMoveContainer = document.querySelector('.your-container');
-const PCMoveEL = document.querySelector('.computer-move');
 const yourMoveEl = document.querySelector('.your-move');
+const PCMoveEL = document.querySelector('.computer-move');
 const winLostText1 = document.querySelector('.win-lost-text-1');
 const winLostText2 = document.querySelector('.win-lost-text-2');
 const nextBtn = document.querySelector('.next-btn');
@@ -57,19 +57,25 @@ moves.forEach((move) => {
     yourMoveEl.src = `images/move-${clickedImageAlt}.png`;
     PCMoveEL.src = `images/move-${random}.png`;
     if (clickedImageAlt === '1') {
-      yourMoveContainer.classList.add('one', 'rock-img');
+      yourMoveContainer.classList.add('one');
+      yourMoveEl.classList.add('rock-img');
     } else if (clickedImageAlt === '2') {
-      yourMoveContainer.classList.add('two', 'paper-img');
+      yourMoveContainer.classList.add('two');
+      yourMoveEl.classList.add('paper-img');
     } else {
-      yourMoveContainer.classList.add('three', 'scissor-img');
+      yourMoveContainer.classList.add('three');
+      yourMoveEl.classList.add('scissor-img');
     }
 
     if (random === 1) {
-      PCMoveContainer.classList.add('one', 'rock-img');
+      PCMoveContainer.classList.add('one');
+      PCMoveEL.classList.add('rock-img');
     } else if (random === 2) {
-      PCMoveContainer.classList.add('two', 'paper-img');
+      PCMoveContainer.classList.add('two');
+      PCMoveEL.classList.add('paper-img');
     } else {
-      PCMoveContainer.classList.add('three', 'scissor-img');
+      PCMoveContainer.classList.add('three');
+      PCMoveEL.classList.add('scissor-img');
     }
 
     //3. Calculate score
@@ -100,7 +106,7 @@ moves.forEach((move) => {
 
 // == Check for winner ==
 function checkForWinner() {
-  if (Number(scoreY.textContent) >= 15) {
+  if (Number(scoreY.textContent) >= 2) {
     winLostText1.classList.remove('hidden');
     winLostText1.textContent = 'YOU WIN';
     winLostText2.classList.remove('hidden');
@@ -120,8 +126,8 @@ function checkForWinner() {
     ellipse.classList.remove('ellipse-transition');
     ellipse.classList.add('ellipse-transition-lost');
   } else if (
-    Number(scoreY.textContent) === 15 &&
-    Number(scoreC.textContent) === 15
+    Number(scoreY.textContent) === 2 &&
+    Number(scoreC.textContent) === 2
   ) {
     return '';
   }
@@ -134,12 +140,18 @@ playAgain.addEventListener('click', () => {
 
   win.classList.add('hidden');
   icons.classList.remove('hidden');
-  yourMoveContainer.classList.remove('one', 'rock-img');
-  yourMoveContainer.classList.remove('two', 'paper-img');
-  yourMoveContainer.classList.remove('three', 'scissor-img');
-  PCMoveContainer.classList.remove('one', 'rock-img');
-  PCMoveContainer.classList.remove('two', 'paper-img');
-  PCMoveContainer.classList.remove('three', 'scissor-img');
+  yourMoveContainer.classList.remove('one');
+  yourMoveContainer.classList.remove('two');
+  yourMoveContainer.classList.remove('three');
+  yourMoveEl.classList.remove('rock-img');
+  yourMoveEl.classList.remove('paper-img');
+  yourMoveEl.classList.remove('scissor-img');
+  PCMoveContainer.classList.remove('one');
+  PCMoveContainer.classList.remove('two');
+  PCMoveContainer.classList.remove('three');
+  PCMoveEL.classList.remove('rock-img');
+  PCMoveEL.classList.remove('paper-img');
+  PCMoveEL.classList.remove('scissor-img');
   ellipse.classList.remove('ellipse-transition');
   ellipse.classList.remove('ellipse-transition-win');
   ellipse.classList.remove('ellipse-transition-lost');
@@ -176,12 +188,18 @@ const resetGame = function () {
   icons.classList.remove("hidden");
   scoreC.textContent = 0;
   scoreY.textContent = 0;
-  yourMoveContainer.classList.remove("one", "rock-img");
-  yourMoveContainer.classList.remove("two", "paper-img");
-  yourMoveContainer.classList.remove("three", "scissor-img");
-  PCMoveContainer.classList.remove("one", "rock-img");
-  PCMoveContainer.classList.remove("two", "paper-img");
-  PCMoveContainer.classList.remove("three", "scissor-img");
+  yourMoveContainer.classList.remove('one');
+  yourMoveContainer.classList.remove('two');
+  yourMoveContainer.classList.remove('three');
+  yourMoveEl.classList.remove('rock-img');
+  yourMoveEl.classList.remove('paper-img');
+  yourMoveEl.classList.remove('scissor-img');
+  PCMoveContainer.classList.remove('one');
+  PCMoveContainer.classList.remove('two');
+  PCMoveContainer.classList.remove('three');
+  PCMoveEL.classList.remove('rock-img');
+  PCMoveEL.classList.remove('paper-img');
+  PCMoveEL.classList.remove('scissor-img');
   winLostText1.classList.add("hidden");
   winLostText2.classList.add("hidden");
   playAgain.classList.remove("hidden");
