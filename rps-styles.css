@@ -449,6 +449,11 @@ main {
 /* ======== MEDIA QUERY ========= */
 
 @media only screen and (max-width: 600px) {
+  /* GREET */
+  .greet{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
   /* TITLE */
   .title-container {
     width: 22.5rem;
@@ -481,7 +486,7 @@ main {
 
   /* ICON */
   .icons {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
   }
   .line {
     width: 12rem;
@@ -541,7 +546,7 @@ main {
 
   /* You WIN against PC */
   .you-win {
-    margin: 3.5rem 0rem;
+    margin: 3rem 0rem;
     gap: 0rem;
   }
   .you-win-text {
