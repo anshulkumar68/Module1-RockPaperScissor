@@ -116,7 +116,7 @@ function checkForWinner() {
     gameActive = false;
     playAgain.classList.add('hidden');
     resetBtn.classList.remove('hidden');
-  } else if (Number(scoreC.textContent) >= 15) {
+  } else if (Number(scoreC.textContent) >= 2) {
     winLostText1.classList.remove('hidden');
     winLostText1.textContent = 'YOU LOST';
     winLostText2.classList.remove('hidden');
